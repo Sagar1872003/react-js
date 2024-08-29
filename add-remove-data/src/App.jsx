@@ -1,35 +1,91 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./style.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [input, setInput] = useState([{ id: Math.random(), name: "", phone: "" }]);
+  const [disable, setDisable] = useState([]);
+
+  const addMore = () => {
+    let newfield = { id: Math.random(), name: "", phone: "" };
+    setInput([...input, newfield]);
+  };
+
+  const removeBtn = (id) => {
+    let deleteData = input.filter((val) => val.id !== id);
+    setInput(deleteData);
+  };
+
+  const doneBtn = (id) => {
+    if (!disable.includes(id)) {
+      setDisable([...disable, id]);
+    }
+  };
+
+  const editBtn = (id) => {
+    setDisable(disable.filter((disableId) => disableId !== id));
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="container">
+      <h2>Dynamic Form</h2>
+      {input.map((val, index) => (
+        <div className="form-group" key={val.id}>
+          {disable.includes(val.id) ? (
+            <>
+              <input
+                type="text"
+                value={val.name}
+                disabled
+                className="input-field"
+                placeholder="Name"
+              />
+              <input
+                type="text"
+                value={val.phone}
+                disabled
+                className="input-field"
+                placeholder="Phone"
+              />
+              <button className="edit-btn" onClick={() => editBtn(val.id)}>Edit</button>
+            </>
+          ) : (
+            <>
+              <input
+                type="text"
+                value={val.name}
+                className="input-field"
+                placeholder="Name"
+                onChange={(e) => {
+                  const updatedInputs = input.map((item) =>
+                    item.id === val.id ? { ...item, name: e.target.value } : item
+                  );
+                  setInput(updatedInputs);
+                }}
+              />
+              <input
+                type="text"
+                value={val.phone}
+                className="input-field"
+                placeholder="Phone"
+                onChange={(e) => {
+                  const updatedInputs = input.map((item) =>
+                    item.id === val.id ? { ...item, phone: e.target.value } : item
+                  );
+                  setInput(updatedInputs);
+                }}
+              />
+              <button className="done-btn" onClick={() => doneBtn(val.id)}>Done</button>
+              
+              {index > 0 && (
+                <button className="remove-btn" onClick={() => removeBtn(val.id)}>Remove</button>
+              )}
+            </>
+          )}
+        </div>
+      ))}
+      <button className="add-btn" onClick={addMore}>Add</button>
+    </div>
+  );
 }
 
-export default App
+export default App;
