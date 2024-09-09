@@ -1,0 +1,152 @@
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+.open {
+  font-family: 'Open Sans';
+}
+
+body{
+  font-family: 'Poppins' !important;
+}
+.navbar {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding:10px 40px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.brand img {
+  height: 35px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width:400px !important;
+  height:45px !important;
+  flex-grow: 1;
+}
+
+.search input {
+  border: 1px solid #64b496;
+  padding: 8px 12px;
+  border-radius:4px 0 0 4px;
+  margin:0 0 0 130px;
+  flex-grow: 1;
+}
+
+.dropdown {
+  position: relative;
+  margin-right: 130px;
+  background-color: #ffffff;
+  color: rgb(11, 10, 10);
+  border: 1px solid #64b496;
+  border-radius:0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+}
+
+#dropdownMenuButton i {
+  margin-left: 5px;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.dropdownMenu li {
+  list-style: none;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdownMenu li:last-child {
+  border-bottom: none;
+}
+
+.dropdownMenu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.searchButton {
+  background-color:#64b496;
+  color: white;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.searchButton i {
+  margin-left: 5px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions a {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.actions a:hover {
+  text-decoration: underline;
+}
+
+.actions a:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .brand {
+    margin-bottom: 15px;
+  }
+
+  .search {
+    margin-bottom: 15px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions a {
+    margin-bottom: 10px;
+  }
+}

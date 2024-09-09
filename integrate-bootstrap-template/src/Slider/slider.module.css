@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #DFF5E1;
+}
+
+.carousel-inner {
+  height: 100vh;
+}
+
+.carouselCaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 50px;
+}
+
+.carouselCaption > .textContent {
+  max-width: 50%;
+  margin-top:210px;
+  text-align: left;
+  margin-left:-100px;
+}
+
+.textContent h1 {
+  color: #000;
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.textContent p {
+  font-size: 16px;
+  color: #6c757d;
+  margin: 20px 0;
+}
+
+.shopNow {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #64b496;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.header span {
+  text-decoration: none;
+  color: #329160 ;
+  border-bottom: 2px solid #3eb075;
+  margin-right:15px;
+}

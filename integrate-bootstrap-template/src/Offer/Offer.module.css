@@ -1,0 +1,33 @@
+  .card{
+    width:100%;
+    height: 230px;
+  }
+  .img{
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    border-radius:5px;
+    width:100%;
+    height:100%;
+    padding: 20px;
+  }
+  .btn{
+    background-color:#64b496;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius:5px;
+    padding:5px 8px;
+    width:150px;
+  }
+  .title{
+    padding-right:160px;
+    font-size:25px;
+    font-weight: 600;
+    font-family:'Poppins';
+  }
+  .text{
+    font-size:20px;
+    font-weight:bold;
+    color: #64b496;
+  }

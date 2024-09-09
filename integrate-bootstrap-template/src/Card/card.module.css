@@ -1,0 +1,110 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.cardGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 70px 10px;
+}
+
+.cardLeft {
+    width: 30%;
+    background-color: #f9f8f8;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left:70px;
+}
+
+.cardRight {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-right:50px;
+}
+
+.cardItem {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.cardTitle {
+    font-weight: bold;
+}
+.cardTitle:hover {
+   color: #64b496;
+}
+
+.cardText {
+    font-size: 14px;
+}
+
+.cardImage {
+    position: relative;
+    width: 49%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cardImage img {
+    width: 100%;
+    height: auto;
+}
+
+.cardOverlay {
+    position: absolute;
+    top: -80px;
+    left: -30px;
+    width: 200px;
+    height: 200px;
+    border-radius:50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.cardOverlay:hover {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:0px;
+}
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.cardOffer {
+    font-size: 30px;
+    font-weight: bold;
+    margin:0  280px 390px 0;
+    padding: 90px 0  0 40px;
+}
+
+.cardButton {
+    background-color: #64b496;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 99;
+}
