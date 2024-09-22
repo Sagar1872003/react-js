@@ -1,0 +1,159 @@
+/* Basic styling for the container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2, h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+form h4 {
+  margin-bottom: 15px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+table button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table button:hover {
+  background-color: #ff1a1a;
+}
+
+table button:nth-child(2) {
+  background-color: #007bff;
+  margin-left: 5px;
+}
+
+table button:nth-child(2):hover {
+  background-color: #0056b3;
+}
+
+/* Search, filter, and sort inputs */
+input[type="text"], select {
+  margin-right: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+select {
+  width: auto;
+}
+
+input[type="text"] {
+  width: 200px;
+}
+
+/* Add button styling */
+.add-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  form, table {
+    width: 100%;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  input[type="text"], select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .add-btn {
+    float: none;
+    width: 100%;
+  }
+}
