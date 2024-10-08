@@ -1,0 +1,41 @@
+.box {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+    justify-content: flex-start;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.name input,
+.dec input {
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.name input:focus,
+.dec input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.sub {
+    color: orange;
+    border: none;
+    cursor: pointer;
+    margin-left: 80%;
+    font-size: 1.5rem;
+    background: none;
+}
